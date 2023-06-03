@@ -1,0 +1,62 @@
+﻿@model Business.Data.Page
+
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string url = $"/page/{Model.Alias}";
+}
+<!-- Main Container  -->
+<div style="margin-left: 300px;" class="main-container container">
+    <ul class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">@Model.PageName</a></li>
+    </ul>
+
+    <div class="row">
+        <!--Left Part Start -->
+        <aside class="col-md-3 col-sm-4 col-xs-12 content-aside left_column " id="column-left">
+            <div class="module blog-category titleLine">
+                <h3 class="modtitle">@Model.PageName</h3>
+                <div class="modcontent">
+                    <ul class="list-group ">
+                        <li class="list-group-item"> <a href="@url" class="group-item active">@Model.PageName</a></li>
+                        <li class="list-group-item"><a href="@url" class="group-item">Demo Category 2</a></li>
+                        <li class="list-group-item"><a href="@url" class="group-item">Demo Category 3</a></li>
+                        <li class="list-group-item"><a href="@url" class="group-item">Demo Category 4</a></li>
+                        <li class="list-group-item"><a href="@url" class="group-item">Demo Category 5</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </aside>
+        <!--Left Part End -->
+        <!--Middle Part Start-->
+        <div id="content" class="col-md-9 col-sm-8">
+            <div class="article-info">
+                <div class="blog-header">
+                </div>
+                <div class="article-sub-title">
+                    <span class="article-date">@Model.CreatedDate</span>
+                </div>
+                <div class="form-group">
+                    <a href="image/catalog/blog/4.jpg" class="image-popup"><img src="image/catalog/blog/4.jpg" alt="Kire tuma demonstraverunt lector"></a>
+                </div>
+
+                <div class="article-description">
+                    @Html.Raw(Model.Contents)
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <!--Middle Part End-->
+</div>
+<!-- //Main Container -->
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

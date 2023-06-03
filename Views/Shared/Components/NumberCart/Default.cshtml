@@ -1,0 +1,19 @@
+﻿
+@model List<Business.CartItem>
+@if (Model != null && Model.Count() > 0)
+{
+
+    <span class="items_cart">@Model.Count()</span>
+
+    <span class="items_cart2"> item(s)</span>
+
+   
+}
+else
+{
+    <span class="items_cart">0</span>
+
+    <span class="items_cart2"> item(s)</span>
+}
+
+

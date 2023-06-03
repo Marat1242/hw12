@@ -1,0 +1,37 @@
+﻿@model Business.ViewOders
+
+@{
+    var total = Model.OrderDetail.Sum(x => x.TotalMoney).Value.ToString("#,##0");
+}
+
+<h3>Order information: #@Model.Order.OrderId</h3>
+<br />
+<p>Order Date: @Model.Order.OrderDate</p>
+<p>Order Status: @Model.Order.TransactStatus.Status</p>
+<p>Total order value: <strong> @total Rub</strong></p>
+<p>Shipping date: @Model.Order.ShipDate</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <tbody>
+            <tr>
+                <th>#</th>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Unit Price</th>
+                <th>Total Money</th>
+            </tr>
+
+            @foreach (var item in Model.OrderDetail)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.Product.ProductName</td>
+                    <td>@item.Amount</td>
+                    <td>@item.Product.ProductName</td>
+                    <td>@item.TotalMoney.Value.ToString("#,##0") Rub</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,112 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic page needs
+    ============================================ -->
+    <title>SuperMarket - Multipurpose Responsive HTML5 Template</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="html5 template, best html5 template, best html template, html5 basic template, multipurpose html5 template, multipurpose html template, creative html templates, creative html5 templates" />
+    <meta name="description" content="SuperMarket is a powerful Multi-purpose HTML5 Template with clean and user friendly design. It is definite a great starter for any eCommerce web project." />
+    <meta name="author" content="Magentech">
+    <meta name="robots" content="index, follow" />
+
+    <!-- Mobile specific metas
+    ============================================ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Favicon
+    ============================================ -->
+    <link rel="shortcut icon" type="image/png" href="~/assets_/ico/favicon-16x16.png" />
+
+    <link href="~/assets_/css/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <!-- Libs CSS
+    ============================================ -->
+    <link rel="stylesheet" href="~/assets_/css/bootstrap/css/bootstrap.min.css">
+    <link href="~/assets_/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/assets_/js/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="~/assets_/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="~/assets_/css/themecss/lib.css" rel="stylesheet">
+    <link href="~/assets_/js/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="~/assets_/js/minicolors/miniColors.css" rel="stylesheet">
+
+    <!-- Theme CSS
+    ============================================ -->
+    <link href="~/assets_/css/themecss/so_searchpro.css" rel="stylesheet">
+    <link href="~/assets_/css/themecss/so_megamenu.css" rel="stylesheet">
+    <link href="~/assets_/css/themecss/so-categories.css" rel="stylesheet">
+    <link href="~/assets_/css/themecss/so-listing-tabs.css" rel="stylesheet">
+    <link href="~/assets_/css/themecss/so-category-slider.css" rel="stylesheet">
+    <link href="~/assets_/css/themecss/so-newletter-popup.css" rel="stylesheet">
+
+    <link href="~/assets_/css/footer/footer1.css" rel="stylesheet">
+    <link href="~/assets_/css/header/header1.css" rel="stylesheet">
+    <link id="color_scheme" href="~/assets_/css/theme.css" rel="stylesheet">
+    <link href="~/assets_/css/responsive.css" rel="stylesheet">
+
+    <!-- Google web fonts
+    ============================================ -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="common-home res layout-1">
+
+    <div id="wrapper" class="wrapper-fluid banners-effect-3">
+
+
+        <!-- Header Container  -->
+        @await Html.PartialAsync("_HeaderPartialView.cshtml")
+
+        <!-- //Header Container  -->
+        @RenderBody()
+
+        <!-- Footer Container -->
+        @await Html.PartialAsync("_FooterPartialView.cshtml")
+        <!-- //end Footer Container -->
+
+    </div>
+
+
+    <!-- End Color Scheme
+    ============================================ -->
+    <!-- Include Libs & Plugins
+    ============================================ -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="~/assets_/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="~/assets_/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets_/js/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="~/assets_/js/slick-slider/slick.js"></script>
+    <script type="text/javascript" src="~/assets_/js/themejs/libs.js"></script>
+    <script type="text/javascript" src="~/assets_/js/unveil/jquery.unveil.js"></script>
+    <script type="text/javascript" src="~/assets_/js/countdown/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="~/assets_/js/dcjqaccordion/jquery.dcjqaccordion.2.8.min.js"></script>
+    <script type="text/javascript" src="~/assets_/js/datetimepicker/moment.js"></script>
+    <script type="text/javascript" src="~/assets_/js/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets_/js/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="~/assets_/js/modernizr/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="~/assets_/js/minicolors/jquery.miniColors.min.js"></script>
+
+    <!-- Theme files
+    ============================================ -->
+
+    <script type="text/javascript" src="~/assets_/js/themejs/application.js"></script>
+
+    <script type="text/javascript" src="~/assets_/js/themejs/homepage.js"></script>
+
+    <script type="text/javascript" src="~/assets_/js/themejs/toppanel.js"></script>
+    <script type="text/javascript" src="~/assets_/js/themejs/so_megamenu.js"></script>
+    <script type="text/javascript" src="~/assets_/js/themejs/addtocart.js"></script>
+
+    @await Component.InvokeAsync("Notyf")
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
